@@ -47,6 +47,8 @@ sudo usermod -aG admin touko
 # - /etc/greetd/config.toml
 # - .config dir
 # - scripts copied to /usr/local/bin/
+# - /etc/default/grub
+# - took permissions away from a file that had a name something like /etc/grub.d/05-debian-theme
 
 sudo apt install gnome-keyring seahorse
 # Created login password keyring with seahorse
