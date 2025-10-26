@@ -1,0 +1,4 @@
+#!/bin/bash
+
+dwl -s 'dwlb -font "monospace:size=10"'
+

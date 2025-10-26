@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while [ 1 ]
+do
+  dwlb -status all "$(date '+%H:%M')"
+
+  sleep 1
+done
+

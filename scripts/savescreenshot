@@ -1,0 +1,6 @@
+#!/bin/bash
+mkdir -p ~/pictures/screenshots
+file=~/pictures/screenshots/screenshot-$(date +"%Y%m%d-%H%M%S").png
+grim -g "$(slurp)" $file
+
+
