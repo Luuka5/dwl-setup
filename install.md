@@ -34,7 +34,7 @@ cd ..
 
 sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower
 
-sudo apt install linux-headers-$(uname -r)
+sudo apt install linux-headers-$(uname -r) rfkill
 
 sudo apt install fonts-jetbrains-mono gh
 
