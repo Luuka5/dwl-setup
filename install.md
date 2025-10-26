@@ -38,5 +38,15 @@ sudo apt install linux-headers-$(uname -r)
 
 sudo apt install fonts-jetbrains-mono gh
 
-# not completed setup
+# added admin group, modified sudoers to allow poweroff/reboot/halt
+sudo groupadd admin
+sudo usermod -aG admin touko 
+
+# Modified files
+# - /etc/sudoers
+# - /etc/greetd/config.toml
+# - .config dir
+# - scripts copied to /usr/local/bin/
+
 sudo apt install gnome-keyring seahorse
+# Created login password keyring with seahorse
