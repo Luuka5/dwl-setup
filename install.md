@@ -36,7 +36,7 @@ sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower
 
 sudo apt install linux-headers-$(uname -r)
 
-sudo apt install fonts-jetbrains-mono
+sudo apt install fonts-jetbrains-mono gh
 
 # not completed setup
 sudo apt install gnome-keyring seahorse
