@@ -162,7 +162,7 @@ static const Key keys[] = {
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
-	{ MODKEY,		     XKB_KEY_e,          spawn, 	 {.v = browsercmd} },
+	{ MODKEY,		     XKB_KEY_w,          spawn, 	 {.v = browsercmd} },
 
 	{ MODKEY,                    XKB_KEY_a,          toggledwlb, 	{0} },
 	{ MODKEY,                    XKB_KEY_g,          togglegaps, 	{0} },
