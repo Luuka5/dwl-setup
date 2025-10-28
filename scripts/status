@@ -1,9 +1,7 @@
 #!/bin/bash
 
-while [ 1 ]
-do
-  dwlb -status all "$(date '+%H:%M')"
+STATUS_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/statusbar"
 
-  sleep 1
-done
+STATUS=$(find "$STATUS_DIR" -type f -exec cat {} \;)
+dwlb -status all "$STATUS  $(date '+%H:%M')"
 

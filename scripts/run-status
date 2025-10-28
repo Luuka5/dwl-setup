@@ -1,0 +1,12 @@
+#!/bin/bash
+
+STATUS_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/statusbar"
+
+mkdir -p $STATUS_DIR
+
+while [ 1 ]
+do
+  status
+  sleep 1
+done
+

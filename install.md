@@ -32,12 +32,12 @@ cd zunder-zsh
 ./install.sh
 cd ..
 
-sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower 
+sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower gh
 sudo apt install thunar gvfs-backends  gvfs-fuse
 
 sudo apt install linux-headers-$(uname -r) rfkill
 
-sudo apt install fonts-jetbrains-mono gh
+sudo apt install fonts-jetbrains-mono fonts-material-design-icons-iconfont 
 
 # added admin group, modified sudoers to allow poweroff/reboot/halt
 sudo groupadd admin
@@ -54,5 +54,7 @@ sudo usermod -aG admin touko
 
 sudo apt install gnome-keyring seahorse
 # Created login password keyring with seahorse
+
+sudo apt install xwayland 
 
 
