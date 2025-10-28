@@ -1,4 +1,4 @@
 #!/bin/bash
 
-dwl -s 'dwlb -hidden -font "JetBrains Mono NL:size=10"'
+dwl -s 'dwlb -hidden -font "JetBrains Mono NL:size=8"'
 
