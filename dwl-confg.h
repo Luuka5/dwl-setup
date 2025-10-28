@@ -20,7 +20,8 @@ static const float urgentcolor[]           = COLOR(0xff0000ff);
 static const float fullscreen_bg[]         = {0.f, 0.f, 0.f, 1.0f}; /* You can also use glsl colors */
 
 /* tagging - TAGCOUNT must be no greater than 31 */
-#define TAGCOUNT (9)
+// Add tag 10 - an invisible firefox tag to start firefox faster 
+#define TAGCOUNT (10)
 
 /* logging */
 static int log_level = WLR_ERROR;
@@ -31,6 +32,8 @@ static const Rule rules[] = {
 	/* examples: */
 	{ "Gimp_EXAMPLE",     NULL,       0,            1,           -1 }, /* Start on currently visible tags floating, not tiled */
 	{ "firefox_EXAMPLE",  NULL,       1 << 8,       0,           -1 }, /* Start on ONLY tag "9" */
+	// Start firefox in an invisible tag to startup faster
+	//{ "firefox",          NULL,       1 << 9,       0,           -1 },
 };
 
 /* layout(s) */
