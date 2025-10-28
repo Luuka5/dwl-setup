@@ -32,7 +32,8 @@ cd zunder-zsh
 ./install.sh
 cd ..
 
-sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower
+sudo apt install swaybg grim slurp wl-clipboard swaylock swayidle kanshi upower 
+sudo apt install thunar gvfs-backends  gvfs-fuse
 
 sudo apt install linux-headers-$(uname -r) rfkill
 
@@ -49,6 +50,9 @@ sudo usermod -aG admin touko
 # - scripts copied to /usr/local/bin/
 # - /etc/default/grub
 # - took permissions away from a file that had a name something like /etc/grub.d/05-debian-theme
+# - /etc/polkit-1/rules.d/10-udisks2-mount.rules # Polkit for mounting
 
 sudo apt install gnome-keyring seahorse
 # Created login password keyring with seahorse
+
+
