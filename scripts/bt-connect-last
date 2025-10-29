@@ -1,9 +1,5 @@
 #!/bin/bash
 
-STATUS_FILE="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/statusbar/bt-connect-last.txt"
-printf '+\uf294' > "$STATUS_FILE"
-status
-
 # Get the most recently connected device from bluetoothctl
 DEVICE=$(bluetoothctl devices | while read -r _ mac name; do
     # Check if device is paired and get its info
@@ -20,7 +16,3 @@ else
     echo "No previously connected device found"
 fi
 
-sleep 0.5 
-rm "$STATUS_FILE"
-
-status

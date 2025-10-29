@@ -55,6 +55,7 @@ sudo usermod -aG admin touko
 sudo apt install gnome-keyring seahorse
 # Created login password keyring with seahorse
 
-sudo apt install xwayland 
+sudo apt install xwayland
+sudo apt install brightnessctl
 
 
