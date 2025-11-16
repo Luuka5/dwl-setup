@@ -39,10 +39,10 @@ static const Rule rules[] = {
 /* layout(s) */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " | ",      tile },
-	{ " X ",      NULL },    /* no layout function means floating behavior */
-	{ " M ",      monocle },
-	{ " - ",      tilevertical },
+	{ " \uef4c ",      tile },
+	{ " \ueb23 ",      NULL },    /* no layout function means floating behavior */
+	{ " \ueb7f ",      monocle },
+	{ " \uef4d ",      tilevertical },
 };
 
 /* monitors */
@@ -130,14 +130,27 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
+// Track command is used to send an symbol to status bar informing that the operation is being done
 static const char *termcmd[] = { "foot", NULL };
 static const char *menucmd[] = { "wmenu-run", "-N", "000000ff", "-S", "cc241dff", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 
-static const char *clipscreenshotcmd[] = { "clipscreenshot", NULL };
-static const char *savescreenshotcmd[] = { "savescreenshot", NULL };
 static const char *lockcmd[] = { "lock", NULL };
 static const char *suspendcmd[] = { "locksuspend", NULL };
+
+static const char *clipscreenshotcmd[] = { "track", "\uf50c \uf061 \uf07f", "--", "clipscreenshot", NULL };
+static const char *savescreenshotcmd[] = { "track", "\uf50c \uf061 \uf4a5", "--", "savescreenshot", NULL };
+static const char *btconnectlastcmd[] = { "track", "+\uf294", "0.5", "--", "bt-last-device", "connect", NULL };
+static const char *btdisconnectlastcmd[] = { "track", "-\uf294", "0.5", "--", "bt-last-device", "disconnect", NULL };
+
+static const char *mediaplaypausecmd[] = { "track", "\ueb2c\uf04c", "0.5", "--", "media-control", "play-pause", NULL };
+static const char *medianextcmd[] = { "track", "\uf051", "0.5", "--", "media-control", "next", NULL };
+static const char *mediaprevcmd[] = { "track", "\uf048", "0.5", "--", "media-control", "prev", NULL };
+
+static const char *volumeupcmd[] = { "track", "\uf028+", "0.5", "--", "media-control", "volume", "5", NULL };
+static const char *volumedowncmd[] = { "track", "\uf027-", "0.5", "--", "media-control", "volume", "-5", NULL };
+static const char *brightnessupcmd[] = { "track", "\uf400+", "0.5", "--", "brightness-control", "up", NULL };
+static const char *brightnessdowncmd[] = { "track", "\uf400-", "0.5", "--", "brightness-control", "down", NULL };
 
 void
 toggledwlb(const Arg *arg)
@@ -175,6 +188,19 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Q,          spawn, 	{.v = suspendcmd} },
 	{ MODKEY,                    XKB_KEY_minus,      incgaps, 	{.i = -5} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_underscore, incgaps, 	{.i = 5} },
+
+	{ MODKEY,                    XKB_KEY_b,          spawn,		{.v = btconnectlastcmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_B,		 spawn, 	{.v = btdisconnectlastcmd} },
+
+	{ MODKEY,                    XKB_KEY_Up,         spawn,		{.v = volumeupcmd } },
+	{ MODKEY,                    XKB_KEY_Down,       spawn,		{.v = volumedowncmd } },
+	{ MODKEY,                    XKB_KEY_Right,      spawn,		{.v = brightnessupcmd} },
+	{ MODKEY,                    XKB_KEY_Left,       spawn,		{.v = brightnessdowncmd} },
+
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Right,      spawn,		{.v = medianextcmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Left,       spawn,		{.v = mediaprevcmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Up,         spawn,		{.v = mediaplaypausecmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Down,       spawn,		{.v = mediaplaypausecmd} },
 
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },

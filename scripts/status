@@ -21,7 +21,7 @@ for ps in /sys/class/power_supply/*; do
     if [ "$scope" = "System" ]; then
         # Get battery percentage
         capacity=$(cat "$ps/capacity" 2>/dev/null)
-        
+
         # Get charging status
         status=$(cat "$ps/status" 2>/dev/null)
         
@@ -64,5 +64,12 @@ for ps in /sys/class/power_supply/*; do
     fi
 done
 
-dwlb -status all "$STATUS  $(date '+%H:%M')"
+# Network status script - warns if disconnected 
+
+# No active connection found
+if [ -z "$(ip a | grep " UP ")" ]; then
+    NETWORK="  $(printf '\uead0')"
+fi
+
+dwlb -status all "$STATUS$BATTERY$NETWORK  $(date '+%H:%M')"
 
