@@ -1,0 +1,52 @@
+00:00:00.028 [ERROR] [EGL] command: eglQueryDmaBufModifiersEXT, error: EGL_BAD_PARAMETER (0x300c), message: "EGL_BAD_PARAMETER error: In eglQueryDmaBufModifiersEXT: Invalid format
+"
+00:00:00.028 [ERROR] [render/egl.c:851] Failed to query dmabuf number of modifiers
+00:00:00.028 [ERROR] [EGL] command: eglQueryDmaBufModifiersEXT, error: EGL_BAD_PARAMETER (0x300c), message: "EGL_BAD_PARAMETER error: In eglQueryDmaBufModifiersEXT: Invalid format
+"
+00:00:00.028 [ERROR] [render/egl.c:851] Failed to query dmabuf number of modifiers
+WL-1 title 
+WL-1 appid 
+WL-1 fullscreen 
+WL-1 floating 
+WL-1 selmon 0
+WL-1 tags 0 1 0 0
+WL-1 layout   
+WL-1 title 
+WL-1 appid 
+WL-1 fullscreen 
+WL-1 floating 
+WL-1 selmon 1
+WL-1 tags 0 1 0 0
+WL-1 layout   
+applying profile 'default'
+applying profile output 'Acer Technologies K242HL T0FEE0108527' on connected head 'HDMI-A-1'
+applying profile output 'Acer Technologies Acer XB240H T1YEE0114202' on connected head 'DP-1'
+no profile matched
+running command 'swaybg -o DP-1 -i /home/touko/setup/wallpapers/rocks-horizontal.jpg -m fill'
+running command 'swaybg -o HDMI-A-1 -i /home/touko/setup/wallpapers/rocks-vertical.jpg -m fi'
+configuration for profile 'default' applied
+2025-11-16 11:58:12 - [background-image.c:20] Unsupported background mode: fi
+2025-11-16 11:58:12 - [main.c:473] Invalid mode: fi
+2025-11-16 11:58:12 - 2025-11-16 11:58:12 - [main.c:282] Found config HDMI-A-1 for output HDMI-A-1 (Acer Technologies K242HL T0FEE0108527)
+[main.c:278] Could not find config for output HDMI-A-1 (Acer Technologies K242HL T0FEE0108527)
+2025-11-16 11:58:12 - 2025-11-16 11:58:12 - [main.c:278] Could not find config for output DP-1 (Acer Technologies Acer XB240H T1YEE0114202)[main.c:282] Found config DP-1 for output DP-1 (Acer Technologies Acer XB240H T1YEE0114202)
+
+no profile matched
+reloading config
+applying profile 'default'
+applying profile output 'Acer Technologies K242HL T0FEE0108527' on connected head 'HDMI-A-1'
+applying profile output 'Acer Technologies Acer XB240H T1YEE0114202' on connected head 'DP-1'
+reloading config
+applying profile 'default'
+applying profile output 'Acer Technologies K242HL T0FEE0108527' on connected head 'HDMI-A-1'
+applying profile output 'Acer Technologies Acer XB240H T1YEE0114202' on connected head 'DP-1'
+configuration for profile 'default' applied
+running command 'swaybg -o DP-1 -i /home/touko/setup/wallpapers/rocks-horizontal.jpg -m fill'
+running command 'swaybg -o HDMI-A-1 -i /home/touko/setup/wallpapers/rocks-vertical.jpg -m fi'
+configuration for profile 'default' applied
+2025-11-16 12:00:42 - [background-image.c:20] Unsupported background mode: fi
+2025-11-16 12:00:42 - [main.c:473] Invalid mode: fi
+2025-11-16 12:00:42 - 2025-11-16 12:00:42 - [main.c:278] Could not find config for output HDMI-A-1 (Acer Technologies K242HL T0FEE0108527)[main.c:282] Found config HDMI-A-1 for output HDMI-A-1 (Acer Technologies K242HL T0FEE0108527)
+
+2025-11-16 12:00:42 - [main.c:282] Found config DP-1 for output DP-1 (Acer Technologies Acer XB240H T1YEE0114202)
+2025-11-16 12:00:42 - [main.c:278] Could not find config for output DP-1 (Acer Technologies Acer XB240H T1YEE0114202)
