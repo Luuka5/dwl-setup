@@ -1,0 +1,10 @@
+
+profile default {
+  output "Acer Technologies Acer XB240H T1YEE0114202" mode 1920x1080@144 position 1080,360
+  output "Acer Technologies K242HL T0FEE0108527" mode 1920x1080@60 position 0,0 transform 90
+
+  exec swaybg -o DP-1 -i /home/touko/setup/wallpapers/rocks-horizontal.jpg -m fill
+  exec swaybg -o HDMI-A-1 -i /home/touko/setup/wallpapers/rocks-vertical.jpg -m fi
+}
+
+
